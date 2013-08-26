@@ -2,6 +2,12 @@
 ## Eclipse
 #################
 
+##CUSTOM##
+*.csproj
+Unity Projects.userprefs
+
+
+
 *.pydevproject
 .project
 .metadata
