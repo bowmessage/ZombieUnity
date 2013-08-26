@@ -4,10 +4,12 @@ using System.Collections;
 public class ZombieCollision : MonoBehaviour {
 	
 	public int health = 100;
+	ParticleEmitter bloodMain;
 	
 	// Use this for initialization
-	void Start () {
-		health = 100;
+	void Start ()
+	{
+		bloodMain = transform.Find("BloodSplat").Find("Main").particleEmitter;
 	}
 	
 	void Update()
@@ -23,13 +25,21 @@ public class ZombieCollision : MonoBehaviour {
 		{
 			health -= Bullet.pistolBulletDamage;
 			Destroy(objectCollision.gameObject);
+			makeBlood(objectCollision);
 			print ("Zombie hit by bullet");
 		}
 		else if(objectCollision.gameObject.tag == "SMGBullet")
 		{
 			health -= Bullet.smgBulletDamage;
 			Destroy(objectCollision.gameObject);
+			makeBlood(objectCollision);
 			print ("Zombie hit by bullet");
 		}
+	}
+	
+	void makeBlood(Collision objectCollision)
+	{
+		bloodMain.transform.position = objectCollision.transform.position;
+		bloodMain.Emit();
 	}
 }

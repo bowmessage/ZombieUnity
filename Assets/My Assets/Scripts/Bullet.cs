@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 	
 	public static int pistolBulletDamage = 40;
-	public static int smgBulletDamage = 10;
+	public static int smgBulletDamage = 5;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,11 +16,5 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-	}
-	
-//	public void onCollisionEnter(Collision collision)
-//	{
-//		print ("destroying bullet");
-//		Destroy(this.gameObject);
-//	}
+	}	
 }

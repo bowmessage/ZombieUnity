@@ -1,15 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\Scripts\PlayerCollision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\Scripts\Bullet.cs">
     <Files>
-      <File FileName="Assets\My Assets\Scripts\ZombieCollision.cs" Line="16" Column="29" />
-      <File FileName="Assets\My Assets\Scripts\SMG.cs" Line="40" Column="3" />
-      <File FileName="Assets\My Assets\Scripts\Pistol.cs" Line="41" Column="83" />
-      <File FileName="Assets\My Assets\Scripts\SmoothFollow2D.js" Line="11" Column="11" />
-      <File FileName="Assets\My Assets\Scripts\PlayerCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Assets\Scripts\Bullet.cs" Line="13" Column="31" />
-      <File FileName="Assets\My Assets\Scripts\HouseCollision.cs" Line="22" Column="1" />
-      <File FileName="Assets\NGUI\Scripts\Interaction\UISliderColors.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\Scripts\ZombieCollision.cs" Line="11" Column="3" />
+      <File FileName="Assets\My Assets\Scripts\ZombieMovement.cs" Line="13" Column="55" />
+      <File FileName="Assets\My Assets\Scripts\Bullet.cs" Line="7" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ZombieMovement : MonoBehaviour {
 	
-	public float speed;
+	public float speed = 4.5f;
 	public float rotationSpeed = 5.0f;
 	public Transform target;
 	private Transform thisTransform;
@@ -11,7 +11,6 @@ public class ZombieMovement : MonoBehaviour {
 	void Start () {
 		thisTransform = this.gameObject.transform;
 		target = GameObject.FindWithTag("Player").transform;
-		speed = 4.5f;
 	}
 	
 	void Update()
