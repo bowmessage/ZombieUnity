@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\My Assets\NavmeshFollower.cs" />
      <Compile Include="Assets\My Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\My Assets\Scripts\HouseCollision.cs" />
      <Compile Include="Assets\My Assets\Scripts\Pistol.cs" />
