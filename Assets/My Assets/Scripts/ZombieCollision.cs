@@ -4,6 +4,7 @@ using System.Collections;
 public class ZombieCollision : MonoBehaviour {
 	
 	public int health = 100;
+	public GameObject ragdollZombieObject;
 	ParticleEmitter bloodMain;
 	
 	// Use this for initialization
@@ -15,7 +16,7 @@ public class ZombieCollision : MonoBehaviour {
 	void Update()
 	{
 		if (health <= 0)
-			Destroy(this.gameObject);
+			killZombie();
 	}
 	
 	void OnCollisionEnter(Collision objectCollision)
@@ -41,5 +42,18 @@ public class ZombieCollision : MonoBehaviour {
 	{
 		bloodMain.transform.position = objectCollision.transform.position;
 		bloodMain.Emit();
+	}
+		
+	void killZombie()
+	{
+		GameObject ragdollZombie = (GameObject)Instantiate(ragdollZombieObject, this.transform.position, this.transform.rotation);
+		Component[] oldTransforms = this.GetComponentsInChildren(typeof(Transform));
+		Component[] newTransforms = ragdollZombie.GetComponentsInChildren(typeof(Transform));
+		for(int i = 0; i < oldTransforms.Length; i++)
+		{
+			newTransforms[i].transform.position = oldTransforms[i].transform.position;
+			newTransforms[i].transform.rotation = oldTransforms[i].transform.rotation;
+		}
+		Destroy(this.gameObject);
 	}
 }
