@@ -5,7 +5,7 @@ using System.Collections;
 public class ZombieDeath : MonoBehaviour {
 	
 	public float disappearTimer;
-	public int deathForce = 40;
+	public int deathForce = 60;
 	public GameObject ragdollZombieNoCollider;
 	
 	// Use this for initialization
