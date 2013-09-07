@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerCollision : MonoBehaviour {
 	
-	public int health = 100;
+	public static int health = 100;
 	public static int damageFromZombie = 1;
 	
 	// Use this for initialization
