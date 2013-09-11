@@ -7,7 +7,10 @@ public class HouseCollision : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		woodParticles = transform.Find("BloodSplat").Find("Main").particleEmitter;
+		if(transform.Find("BloodSplat") != null)
+			woodParticles = transform.Find("BloodSplat").Find("Main").particleEmitter;
+		else
+			print (this.gameObject.name + " doesn't have the particle emitter.");
 	}
 	
 	void OnCollisionEnter(Collision objectCollision)
@@ -24,7 +27,10 @@ public class HouseCollision : MonoBehaviour {
 	
 	void makeParticles(Collision objectCollision)
 	{
-		woodParticles.transform.position = objectCollision.transform.position;
-		woodParticles.Emit();
+		if(woodParticles != null)
+		{
+			woodParticles.transform.position = objectCollision.transform.position;
+			woodParticles.Emit();
+		}
 	}
 }
