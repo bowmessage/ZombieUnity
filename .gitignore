@@ -6,11 +6,6 @@
 *.csproj
 *.unityproj
 *.sln
-<<<<<<< HEAD
 *.pidb
 *.userprefs
-=======
-*.userprefs
-*.pidb
 .DS_Store
->>>>>>> origin/Waylon-initial
