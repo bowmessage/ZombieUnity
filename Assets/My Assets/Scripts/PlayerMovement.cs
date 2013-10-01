@@ -32,7 +32,12 @@ public class PlayerMovement : MonoBehaviour {
 		
 		Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, playerHeightDif));
 		worldPos.y = this.gameObject.transform.position.y;
-		transform.LookAt(worldPos);
-		transform.Rotate(new Vector3(0,6,0));
+		//#if UNITY_STANDALONE
+			transform.LookAt(worldPos);
+			transform.Rotate(new Vector3(0,6,0));
+		//#else
+			//worldPos = worldPos.normalized;
+			//transform.Translate(worldPos * speed * Time.deltaTime, Space.World);
+		//#endif
 	}
 }

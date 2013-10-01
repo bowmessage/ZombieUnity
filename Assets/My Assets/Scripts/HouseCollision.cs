@@ -30,6 +30,9 @@ public class HouseCollision : MonoBehaviour {
 		if(woodParticles != null)
 		{
 			woodParticles.transform.position = objectCollision.transform.position;
+			//make wood particles always shoot towards player (i.e. opposite direction of bullet travel)
+			woodParticles.worldVelocity = GameObject.FindWithTag("Player").transform.position - transform.position;
+			woodParticles.worldVelocity.Normalize();
 			woodParticles.Emit();
 		}
 	}
